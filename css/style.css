@@ -1,0 +1,377 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #2e2e2e;
+  background: #fafafa;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+.section {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.section.alt {
+  background: #f0f4ef;
+}
+
+/* ================= HERO ================= */
+/* BACKGROUND IMAGE:
+   HERO SECTION
+   Ganti dengan foto kolam + sawah
+*/
+.hero {
+  background-image: url("../assets/images/HeroImage.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.hero-tagline {
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  background: #4f7c3a;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+}
+
+.image-note {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ================= FEATURES ================= */
+.features {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background: white;
+  padding: 1.5rem;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.feature-icon {
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.icon-placeholder {
+  background: #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+/* ================= IMAGE PLACEHOLDER ================= */
+.image-box {
+  background: #ccc;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.image-box.small {
+  height: 150px;
+}
+
+/* ================= MENU ================= */
+.menu-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+
+/* ================= GALERI ================= */
+.gallery-section {
+  padding: 60px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Grid Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Optional overlay */
+.gallery-item::after {
+  content: "Lihat Foto";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+
+/* ================= MAP ================= */
+.map-box {
+  background: #ddd;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.opening-hours {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background-color: #f9faf7; /* warna netral, adem */
+}
+
+.opening-hours h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hours-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 14px;
+  max-width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.icon-placeholder {
+  font-size: 2rem;
+}
+
+.hours-text p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.note {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.location {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.location h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.location-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* PLACEHOLDER MAP */
+.map-placeholder {
+  height: 360px;
+  background-color: #eef1ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.map-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #2f6b3f;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.map-button:hover {
+  background-color: #255531;
+}
+
+/* ================= CTA ================= */
+/* BACKGROUND IMAGE OPSIONAL */
+.cta {
+  position: relative;
+  background-image: url("../assets/images/tempat\ makan.png"); /* FOTO CTA */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 18px;
+  max-width: 720px;
+}
+
+.cta-overlay h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-overlay p {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #2f6b3f;
+  color: #fff;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #255531;
+  transform: translateY(-2px);
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: #2e2e2e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
