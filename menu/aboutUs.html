@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - DOSTENG</title>
+
+<link rel="stylesheet" href="../css/menu.css" />
+
+<style>
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0f2027;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+/* ================= HERO ================= */
+.about-hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(15,32,39,0.7), rgba(15,32,39,0.9)),
+    url("../assets/images/HeroImage.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.about-hero-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.about-hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  max-width: 650px;
+  font-size: 18px;
+  color: #dcecec;
+}
+
+/* ================= SECTION ================= */
+.section {
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+/* ================= ABOUT INTRO ================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #e6f2f2;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+/* ================= VALUES ================= */
+.values {
+  background: linear-gradient(135deg, #102a43, #1b3a4b);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.value-box {
+  background: rgba(255,255,255,0.05);
+  padding: 35px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.value-box:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.08);
+}
+
+.value-box h3 {
+  margin-bottom: 15px;
+  color: #00ffd5;
+}
+
+/* ================= VISION ================= */
+.vision {
+  text-align: center;
+}
+
+.vision h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.vision p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  color: #dcecec;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero h1 {
+    font-size: 36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+    <!-- ================= navigasi ================= -->
+
+<header class="navbar" id="navbar">
+  <div class="logo">DOSTENG</div>
+
+  <nav class="nav-menu">
+    <a href="#">Home</a>
+    <a href="../menu/aboutUs.html">About Us</a>
+    <a href="../menu/vanue.html">Venue</a>
+    <a href="../menu/news.html">News</a>
+    <a href="../menu/event.html">Event</a>
+    <a href="../menu/foodMenu.html">Food Menu</a>
+    <a href="../menu/gallery.html">Gallery</a>
+    <a href="../menu/contactUs.html">Contact Us</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../menu/.html">Home</a>
+  <a href="../menu/aboutUs.html">About Us</a>
+  <a href="../menu/vanue.html">Venue</a>
+  <a href="../menu/news.html">News</a>
+  <a href="../menu/event.html">Event</a>
+  <a href="../menu/foodMenu.html">Food Menu</a>
+  <a href="../menu/gallery.html">Gallery</a>
+  <a href="../menu/ContactUs.html">Contact Us</a>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- ================= HERO ================= -->
+<section class="about-hero">
+  <div class="about-hero-content">
+    <h1>Tentang DOSTENG</h1>
+    <p>
+      DOSTENG adalah kawasan terpadu berbasis UMKM, edukasi, dan pariwisata
+      yang dirancang untuk menciptakan ekosistem bisnis berkelanjutan
+      dan berdampak nyata bagi masyarakat.
+    </p>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section">
+  <div class="container about-grid">
+
+    <div class="about-text">
+      <h2>Siapa Kami</h2>
+      <p>
+        DOSTENG hadir sebagai wadah inkubasi bisnis yang mengintegrasikan
+        sektor kuliner, perikanan, pariwisata, edukasi, dan ekonomi kreatif
+        dalam satu kawasan yang terkelola secara profesional.
+      </p>
+      <p>
+        Kami percaya bahwa UMKM yang kuat adalah fondasi ekonomi daerah.
+        Oleh karena itu, setiap unit usaha di DOSTENG didampingi dengan
+        sistem manajemen, pelatihan, dan konsep bisnis yang berorientasi
+        jangka panjang.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <!-- FOTO AMBIL DARI GALERI YANG SUDAH ADA -->
+      <img src="../assets/images/galery/gambar4.png" alt="Tentang DOSTENG">
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= VALUES ================= -->
+<section class="section values">
+  <div class="container">
+    <h2>Nilai Utama Kami</h2>
+
+    <div class="values-grid">
+      <div class="value-box">
+        <h3>Inkubasi Nyata</h3>
+        <p>
+          Tidak hanya konsep, kami membangun dan menjalankan bisnis secara
+          langsung bersama pelaku UMKM.
+        </p>
+      </div>
+
+      <div class="value-box">
+        <h3>Kolaborasi</h3>
+        <p>
+          Menghubungkan UMKM, investor, komunitas, dan wisata dalam satu
+          ekosistem yang saling menguatkan.
+        </p>
+      </div>
+
+      <div class="value-box">
+        <h3>Keberlanjutan</h3>
+        <p>
+          Fokus pada pertumbuhan jangka panjang dengan tata kelola usaha
+          yang sehat dan profesional.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISION ================= -->
+<section class="section vision">
+  <div class="container">
+    <h2>Visi Kami</h2>
+    <p>
+      Menjadi kawasan inkubasi bisnis dan wisata berbasis UMKM yang
+      unggul, mandiri, dan berdaya saing, serta mampu menjadi model
+      pengembangan ekonomi kawasan di Indonesia.
+    </p>
+  </div>
+</section>
+
+<script src="../js/menu.js"></script>
+
+</body>
+</html>

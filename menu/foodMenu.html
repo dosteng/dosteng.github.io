@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Menu | Dosteng</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/menu.css" />
+
+<style>
+/* ========== BASE ========== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* ========== HERO ========== */
+.menu-hero{
+    height:60vh;
+    background:url('../assets/images/tempat makan.png') center/cover no-repeat;
+    position:relative;
+}
+.menu-hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+.menu-hero-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+.menu-hero-content h1{
+    font-size:46px;
+}
+.menu-hero-content p{
+    max-width:600px;
+    margin-top:10px;
+    opacity:.9;
+}
+
+/* ========== FILTER ========== */
+.menu-section{
+    padding:80px 8%;
+}
+.menu-filter{
+    text-align:center;
+    margin-bottom:40px;
+}
+.menu-filter button{
+    padding:8px 20px;
+    margin:5px;
+    border:none;
+    border-radius:25px;
+    background:#ddd;
+    cursor:pointer;
+    transition:.3s;
+}
+.menu-filter button.active,
+.menu-filter button:hover{
+    background:#c62828;
+    color:#fff;
+}
+
+/* ========== MENU GRID ========== */
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.menu-card{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.3s;
+}
+.menu-card:hover{
+    transform:translateY(-10px);
+}
+.menu-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+.menu-body{
+    padding:20px;
+}
+.menu-body h3{
+    font-size:18px;
+    margin-bottom:5px;
+}
+.menu-body p{
+    font-size:14px;
+    color:#666;
+}
+.menu-price{
+    margin-top:10px;
+    font-weight:600;
+    color:#c62828;
+}
+
+/* ========== FOOTER ========== */
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+    <!-- ================= navigasi ================= -->
+
+<header class="navbar" id="navbar">
+  <div class="logo">DOSTENG</div>
+
+  <nav class="nav-menu">
+    <a href="#">Home</a>
+    <a href="../menu/aboutUs.html">About Us</a>
+    <a href="../menu/vanue.html">Venue</a>
+    <a href="../menu/news.html">News</a>
+    <a href="../menu/event.html">Event</a>
+    <a href="../menu/foodMenu.html">Food Menu</a>
+    <a href="../menu/gallery.html">Gallery</a>
+    <a href="../menu/contactUs.html">Contact Us</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../menu/.html">Home</a>
+  <a href="../menu/aboutUs.html">About Us</a>
+  <a href="../menu/vanue.html">Venue</a>
+  <a href="../menu/news.html">News</a>
+  <a href="../menu/event.html">Event</a>
+  <a href="../menu/foodMenu.html">Food Menu</a>
+  <a href="../menu/gallery.html">Gallery</a>
+  <a href="../menu/ContactUs.html">Contact Us</a>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- HERO -->
+<section class="menu-hero">
+    <div class="menu-hero-content">
+        <h1>Food & Beverage</h1>
+        <p>Menu pilihan khas Dosteng, dibuat dengan rasa terbaik dan suasana alam</p>
+    </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section">
+
+    <!-- FILTER -->
+    <div class="menu-filter">
+        <button class="active" onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('food')">Food</button>
+        <button onclick="filterMenu('drink')">Drink</button>
+        <button onclick="filterMenu('snack')">Snack</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="menu-grid">
+
+        <div class="menu-card food">
+            <img src="../assets/images/ayam.jpeg">
+            <div class="menu-body">
+                <h3>Ayam Bakar Dosteng</h3>
+                <p>Ayam bakar dengan bumbu khas</p>
+                <div class="menu-price">Rp 28.000</div>
+            </div>
+        </div>
+
+        <div class="menu-card food">
+            <img src="../assets/images/ikan.jpeg">
+            <div class="menu-body">
+                <h3>Ikan Bakar</h3>
+                <p>Ikan segar bakar sambal spesial</p>
+                <div class="menu-price">Rp 35.000</div>
+            </div>
+        </div>
+
+        <div class="menu-card drink">
+            <img src="../assets/images/santai.png">
+            <div class="menu-body">
+                <h3>Bandrek Hangat</h3>
+                <p>Minuman tradisional khas</p>
+                <div class="menu-price">Rp 10.000</div>
+            </div>
+        </div>
+
+        <div class="menu-card snack">
+            <img src="../assets/images/makaroni.jpeg">
+            <div class="menu-body">
+                <h3>Makaroni Pedas</h3>
+                <p>Cemilan renyah pedas</p>
+                <div class="menu-price">Rp 8.000</div>
+            </div>
+        </div>
+
+        <div class="menu-card drink">
+            <img src="../assets/images/keluarga.png">
+            <div class="menu-body">
+                <h3>Kopi Tubruk</h3>
+                <p>Kopi hitam khas warung</p>
+                <div class="menu-price">Rp 7.000</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Dosteng. All Rights Reserved.
+</footer>
+
+<script>
+function filterMenu(category){
+    const cards = document.querySelectorAll('.menu-card');
+    const buttons = document.querySelectorAll('.menu-filter button');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    cards.forEach(card=>{
+        if(category === 'all'){
+            card.style.display = 'block';
+        }else{
+            card.style.display = card.classList.contains(category) ? 'block' : 'none';
+        }
+    });
+}
+</script>
+
+<script src="../js/menu.js"></script>
+
+</body>
+</html>
